@@ -21,11 +21,11 @@ def handler(row, cat='wea'):
 
 
 eng = sc.textFile(eng_file)
-eng_header = eng.first()
+#eng_header = eng.first()
 eng_final = eng.map(lambda row: handler(row, 'eng')).filter(lambda tup: tup[1])\
 	.reduceByKey(lambda x, y: [x[0] + y[0]])
 wea = sc.textFile(wea_file)
-wea_header = wea.first()
+#wea_header = wea.first()
 wea_final = wea.map(lambda row: handler(row)).filter(lambda tup: tup[1])
-merge = eng_final.join(wea_final).map(lambda tem: tem[1][0]+tem[1][1])
-merge.saveAsTextFile("clean")
+merge = eng_final.join(wea_final).map(lambda tem: (tem[0], tem[1][0]+tem[1][1]))
+merge.coalesce(1).saveAsTextFile("clean")
