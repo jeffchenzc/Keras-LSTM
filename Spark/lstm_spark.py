@@ -27,5 +27,5 @@ eng_final = eng.map(lambda row: handler(row, 'eng')).filter(lambda tup: tup[1])\
 wea = sc.textFile(wea_file)
 #wea_header = wea.first()
 wea_final = wea.map(lambda row: handler(row)).filter(lambda tup: tup[1])
-merge = eng_final.join(wea_final).map(lambda tem: tem[1][0]+tem[1][1])
+merge = eng_final.join(wea_final).map(lambda tem: (tem[0], tem[1][0]+tem[1][1])).sortByKey()
 merge.coalesce(1).saveAsTextFile("clean")
