@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import re
 
 
-# In[369]:
+# In[392]:
 
 
 
@@ -55,18 +55,19 @@ y_ut = y_ut.reshape((20,4,1))[:,2,:]
     
 x_test = tf.keras.utils.normalize(x_test, axis=0)
 x_train = tf.keras.utils.normalize(x_train, axis=0)
+x_ut = tf.keras.utils.normalize(x_ut, axis=0)
 
 #building LSTM model
 model = tf.keras.models.Sequential()
-model.add(tf.keras.layers.LSTM(700, return_sequences=False, input_shape=(x_train.shape[1], x_train.shape[2]), dropout=0.2))
+model.add(tf.keras.layers.LSTM(1000, return_sequences=False, input_shape=(x_train.shape[1], x_train.shape[2]), dropout=0.2))
 model.add(tf.keras.layers.Dense(100))
-model.add(tf.keras.layers.Dropout(0.3))
+model.add(tf.keras.layers.Dropout(0.1))
 model.add(tf.keras.layers.Dense(1))
 model.compile(loss='mae', optimizer='adam')
-model.fit(x_train, y_train, epochs=100, validation_data=(x_test, y_test))
+model.fit(x_train, y_train, epochs=90, validation_data=(x_test, y_test))
 
 
-# In[371]:
+# In[395]:
 
 
 # xreshape = x_test[14].reshape((1,3,9))
