@@ -6,3 +6,18 @@ dataset download: https://www.kaggle.com/jeanmidev/smart-meters-in-london
 Tools: Apache Spark for data merging and cleaning, TensorFlow Keras for actual model building.
 
 The outcome is given in unit of 1k. Please multiply 1k with predicted outcome to get the actual sum of power consumption on the day.
+
+Note: Red line represents actual data while blue line represents predicted data
+
+Training data:
+![alt text](https://github.com/JeffreyW0w/Spark-LSTM-Prediction/blob/master/result_pics/train.png?raw=true)
+
+Validation data:
+![alt text](https://github.com/JeffreyW0w/Spark-LSTM-Prediction/blob/master/result_pics/valid.png?raw=true)
+
+Unseen data(test):
+![alt text](https://github.com/JeffreyW0w/Spark-LSTM-Prediction/blob/master/result_pics/test.png?raw=true)
+
+
+Conclusion:
+There is a strong correlation between weather and total power consumption. This model is able to predict total power consumption 1 day ahead accurately.
