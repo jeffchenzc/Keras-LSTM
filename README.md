@@ -5,7 +5,7 @@ dataset download: https://www.kaggle.com/jeanmidev/smart-meters-in-london
 
 ***Apache Spark***: reduce electricity data from different stations to the sum of all stations on a single day, and then merged with daily weather
 
-***TensorFlow Keras***:data modeling and prediction
+***TensorFlow Keras***: data modeling and prediction
 
 The outcome is given in unit of 1k. Please multiply 1k with predicted outcome to get the actual sum of power consumption on the day.
 
