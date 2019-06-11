@@ -44,7 +44,10 @@ x_train, y_train = train[:, 1:], train[:, 0]
 x_ut, y_ut = ut[:, 1:], ut[:, 0]
 
 scale_size = 1000
-y_test, y_train, y_ut, output_shift=    np.divide(y_test, scale_size), np.divide(y_train, scale_size), np.divide(y_ut, scale_size),    np.divide(output_shift, scale_size)
+y_test, y_train, y_ut, output_shift = np.divide(y_test, scale_size),\
+	np.divide(y_train, scale_size),\
+	np.divide(y_ut, scale_size),\
+	np.divide(output_shift, scale_size)
 
 
 x_train = x_train.reshape((124,4,9))
