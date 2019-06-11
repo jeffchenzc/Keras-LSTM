@@ -3,7 +3,7 @@ A RNN(LSTM) model that predicts total power consumption of London given previous
 The project is based on Kaggle London Smart Meter dataset, in which only part of weather and daily power dataset is used.
 dataset download: https://www.kaggle.com/jeanmidev/smart-meters-in-london
 
-***Apache Spark***: reduce electricity data from different stations to the sum of all stations on a single day, and then merged with daily weather
+***Apache Spark***: reduce electricity data from different stations to the sum of all stations to dates, and then merge it with daily weather
 
 ***TensorFlow Keras***: data modeling and prediction
 
