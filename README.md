@@ -1,5 +1,5 @@
 # Spark-LSTM-Prediction
-A RNN(LSTM) model that predicts total power consumption of London given previous consumptions and weathers.
+A personal attempt to build a RNN(LSTM) model that predicts total power consumption of London given previous consumptions and weathers.
 The project is based on Kaggle London Smart Meter dataset, in which only part of weather and daily power dataset is used.
 dataset download: https://www.kaggle.com/jeanmidev/smart-meters-in-london
 
