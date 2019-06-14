@@ -8,4 +8,4 @@ dataset download: https://www.kaggle.com/jeanmidev/smart-meters-in-london
 ***TensorFlow Keras***: data modeling and prediction
 
 The outcome is given in unit of 1k. Please multiply 1k with predicted outcome to get the actual sum of power consumption on the day.
-In conclusion, the relationship between weather data and total power consumption is not strong. The prediction is not very accurate. More well rounded datasets would improve the result.
+In conclusion, the relationship between weather data and total power consumption is not strong. Pure LSTM result is disappointing. After applying PCA transformation, with high dimension, a long-term trend of electricity usage could be predicted, though it is not highly accurate in terms of days. More well rounded datasets, other than weather, would potentially improve the result.
